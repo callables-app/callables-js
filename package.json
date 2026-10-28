@@ -1,0 +1,24 @@
+{
+  "name": "callables",
+  "version": "0.0.1",
+  "description": "Turn TypeScript functions into tools your team can run on Callables: forms, schedules and run history.",
+  "keywords": ["callables", "automation", "internal-tools", "workflows", "scheduler"],
+  "homepage": "https://callables.app",
+  "repository": { "type": "git", "url": "git+https://github.com/callables-app/callables-js.git" },
+  "license": "Apache-2.0",
+  "author": "Nomial",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test test/",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
